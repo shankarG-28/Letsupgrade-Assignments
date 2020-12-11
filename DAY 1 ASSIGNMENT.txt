@@ -1,0 +1,36 @@
+#1)  5 DIFFERENT FUNCTIONS OF STRING IN PYTHON :
+
+
+	s1="Hello"
+	s2 ="Java"
+	print(s2.replace("Java", "Python"))		#Replace
+	print(s1.split()) 				#Split
+	print(len(s1)) 					#Length
+	print(s2.upper())				#Upper 
+	print(s2.index("v"))				#Index
+
+
+#2) 5 DIFFERENT FUNCTIONS OF THE LIST OBJECTS IN PYTHON
+
+
+	List = [1,2,3,4,5,6,5,3,5] 
+	print(List.count(5)) 				#count 
+	print(sum(List)) 				#sum of list
+	print(min(List)) 				#minimum
+	print(max(List)) 				#maximum
+	List.remove(2)				#remove 
+	print(List)
+
+#3)EXPERIMENT WITH AT LEAST 5 DEFAULT FUNCTIONS OF DICTIONARY
+
+
+	squares = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+	print(squares.pop(4))				#pop
+	print(squares)
+	print(squares.get(5))				#get
+	print(squares)
+	print(squares.items())				#items
+	squares.clear()					#remove
+	print(squares)
+	squares.update({6:36})			#update
+	print(squares)
