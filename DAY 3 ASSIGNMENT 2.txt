@@ -1,0 +1,51 @@
+#1)IFELSE AND ELSE IF FOR REPORT CARD 
+
+marks = int(input())
+if marks >= 95:
+print ("A grade")
+elif  marks >=75:
+print ("B grade")
+elif marks >=60:
+print ("C grade")
+elif marks >=55:
+print ("D grade")
+else:   print(“Failed”)
+
+#2)FOR LOOP TO PRINT PRIME NUMBER IN BETWEEN 1 TO 1000
+
+
+lower = 1
+upper = 1000
+for num in range(lower, upper + 1):
+if num > 1:
+for i in range(2, num):
+if (num % i) == 0:
+break
+else:
+print(num)
+
+#3)TABLE FROM 1 TO 10
+
+for i in range(1,10):
+print("i =", i, ":")
+for j in range(1, 10):
+print (i,"*",j,"=",i*j)
+
+
+#4)WHILE LOOP USING PRIME NUMBER
+Number = 0
+
+while(Number <= 100):
+count = 0
+i = 2
+
+while(i <= Number//2):
+if(Number % i == 0):
+count = count + 1
+break
+i = i + 1
+
+if (count == 0 and Number != 1):
+print(" %d" %Number, end = '')
+Number = Number  + 1
+
