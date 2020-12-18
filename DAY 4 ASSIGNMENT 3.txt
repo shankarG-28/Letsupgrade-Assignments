@@ -1,0 +1,25 @@
+#FILE READ WRITE APPEND
+
+	file1=open("text.txt","w")
+	file1.write(" I Love Letsupgrade ")
+	file1.close()
+	file1=open("text.txt","r")
+	print(file1.read())
+	file1=open("text.txt","a")
+	file1.write("python essential")
+	file1=open("text.txt","r")
+	print(file1.read())
+	file1.close()
+
+#FACTORIAL NUMBER
+	def factorial(n):
+   if n == 1:
+       return n
+   else:
+       return n*recur_factorial(n-1)
+if num < 0:
+   print("negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   print("The factorial of", num, "is", factorial(num))
