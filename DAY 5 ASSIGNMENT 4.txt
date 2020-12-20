@@ -1,0 +1,32 @@
+# CRYPTOGRAPHY
+
+!pip install cryptography
+from cryptography.fernet import Fernet
+def generatePassKey():
+    key=Fernet.generate_key()
+    print(key)
+    type(key)
+    abc=open("PasswordKey.key",'wb')
+    abc.write(key)
+    abc.close()
+generatePassKey()
+def getMyKey():
+    abc=open("PasswordKey.key",'rb')
+    return abc.read()
+getMyKey()
+def getContentFromUser():
+    return input("enter the content")
+getContentFromUser()
+def encryptMessage(message_normal):
+    Key = getMyKey()
+    k = Fernet(Key)
+    encrypted_Message=k.encrypt(message_normal)
+    return  encrypted_Message
+encryptMessage(b"om")
+def decryptMessage(message_secret):
+    Key = getMyKey()
+    k = Fernet(Key)
+    decrypted_Message=k.decrypt(message_secret)
+    return  decrypted_Message
+decryptMessage(b'gAAAAABf2yqPZxgmmFhVhZ0ZBvY5mSYR-iAgKfTWb0e0bB5Js_Y2bAACOzddM99344gCiJVuQqcyqIU5vV4sogn-o90cQBsOGA==')
+
