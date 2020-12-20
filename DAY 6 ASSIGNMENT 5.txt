@@ -1,0 +1,12 @@
+
+#SEND MAIL
+!pip install emails
+import emails
+ message = emails.html(html="<p>Hi!<br>Here is your receipt...",
+                          subject="hey its me",
+                          mail_from=('hi', 'shankarg@gmail.com'))
+mail_via_python=message.send(to='fokona2995@boersy.com',
+                              smtp={'host': 'smtp.google.com',
+                                    'timeout': 5,'port':587,
+                                    'user':'shankarg@gmail.com','tls':True})
+mail_via_python
